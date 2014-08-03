@@ -8,6 +8,7 @@ console.log(coolors(msg, 'red'));
 console.log(coolors(msg, 'bgBlue'));
 var msgWordColors = msg.split(' ');
 console.log(coolors(msgWordColors[0], 'green') + ' ' + coolors(msgWordColors[1], 'bgMagenta') + ' ' + coolors(msgWordColors[2], 'bold') + ' ' + coolors(msgWordColors[3], 'strikethrough'));
+
 /**
  * CONFIGURATION
  */
@@ -31,8 +32,6 @@ console.log(coolors(msg, {
     inverse: true,
     strikethrough: true
 }));
-
-
 
 /**
  * EXTENDING
