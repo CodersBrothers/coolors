@@ -10,7 +10,22 @@
     "terminal",
     "colors",
     "log",
-    "console"
+    "console",
+    "ansi",
+    "styles",
+    "color",
+    "colour",
+    "console",
+    "cli",
+    "string",
+    "tty",
+    "escape",
+    "formatting",
+    "shell",
+    "xterm",
+    "logging",
+    "command-line",
+    "text"
   ],
   "repository": {
     "type": "git",
