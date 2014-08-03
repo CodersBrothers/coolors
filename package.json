@@ -1,7 +1,7 @@
 {
   "name": "Coolors",
-  "description": "KISS and cool module for do colorful console.log only for NodeJS. Simple, easy.",
-  "version": "0.0.1",
+  "description": "KISS module for do colorful console.log only for NodeJS. Simple, easy.",
+  "version": "0.0.2",
   "author": "CodersBrothers",
   "homepage": "https://github.com/CodersBrothers/coolors",
   "bugs": "https://github.com/CodersBrothers/coolors/issues",
@@ -15,9 +15,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/CodersBrothers/coolors.git"
-  },
-  "engines": {
-    "node": ">=0.1.90"
   },
   "dependencies": {
     "ansi-styles": "^1.1.0",

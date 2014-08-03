@@ -1,8 +1,16 @@
 var coolors = require('./coolors');
+var msg = 'My cool console log';
 
-var msg = 'Hello world';
-console.log(coolors(msg));
-console.log(coolors(msg, 'hidden'));
+/**
+ * SIMPLE
+ */
+console.log(coolors(msg, 'red'));
+console.log(coolors(msg, 'bgBlue'));
+var msgWordColors = msg.split(' ');
+console.log(coolors(msgWordColors[0], 'green') + ' ' + coolors(msgWordColors[1], 'bgMagenta') + ' ' + coolors(msgWordColors[2], 'bold') + ' ' + coolors(msgWordColors[3], 'strikethrough'));
+/**
+ * CONFIGURATION
+ */
 console.log(coolors(msg, {
     text: 'yellow'
 }));
@@ -24,18 +32,35 @@ console.log(coolors(msg, {
     strikethrough: true
 }));
 
-coolors.rainbownLog = function rainbownLog(msg){
-    var colorsText = coolors.filters().text;
-    colorsText = colorsText.splice(3);
-    var lengthColorsText = colorsText.length;
+
+
+/**
+ * EXTENDING
+ * (Stupids example :D)
+ */
+function ligthRed(msg){
+    return '\u001b[91m' + msg + '\u001b[39m';
+}
+coolors.addPlugin('ligthRed', ligthRed);
+console.log(coolors('New color', 'ligthRed'));
+
+function rainbown(msg){
+    var colorsText = coolors.availableStyles().text;
+    var rainbownColors = colorsText.splice(3);
+    var lengthColorsText = rainbownColors.length;
     var msgInLetters = msg.split('');
     var rainbownEndText = '';
     var i = 0;
     msgInLetters.forEach(function(letter){
-        i++;
-        rainbownEndText += coolors(letter, colorsText[i]);
-        if(i === lengthColorsText) i = 0;
+        if(letter != ' '){
+            if(i === lengthColorsText) i = 0;
+            rainbownEndText += coolors(letter, rainbownColors[i]);
+            i++;
+        }else{
+            rainbownEndText += ' ';
+        }
     });
     return rainbownEndText;
-};
-console.log(coolors.rainbownLog('This its a creative example extending core'));
+}
+coolors.addPlugin('rainbown', rainbown);
+console.log(coolors('This its a creative example extending core with a cool rainbown style', 'rainbown'));
