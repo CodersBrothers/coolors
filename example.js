@@ -35,7 +35,7 @@ console.log(coolors(msg, {
 
 /**
  * EXTENDING
- * (Stupids example :D)
+ * (Stupids examples :D)
  */
 function ligthRed(msg){
     return '\u001b[91m' + msg + '\u001b[39m';
