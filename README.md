@@ -113,6 +113,8 @@ console.log(coolorsExtended('This its a creative example extending core with a c
 console.log(coolorsExtended('My cool console log', 'red'));
 ```
 
+If you want extend more you can check [a this](http://misc.flogisoft.com/bash/tip_colors_and_formatting)
+
 #### License
 
 The MIT License (MIT)
