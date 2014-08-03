@@ -6,6 +6,8 @@ KISS, customizable and extensible module for do colorful console.log only for No
 - Clean and focused
 - Extensible and configurable
 
+![screenshot](https://github.com/codersbrothers/coolors/raw/master/screenshot.png)
+
 ## Install
 
 ```sh
@@ -114,6 +116,20 @@ console.log(coolorsExtended('My cool console log', 'red'));
 ```
 
 If you want extend more you can check [a this](http://misc.flogisoft.com/bash/tip_colors_and_formatting)
+
+#### Todo
+* Add example of extend to do a console log with differents colors for type words. Something like:
+     
+        { 
+             special: 'cyan',
+             number: 'yellow',
+             boolean: 'yellow',
+             undefined: 'grey',
+             null: 'bold',
+             string: 'green',
+             date: 'magenta',
+             regexp: 'red' 
+        }   
 
 #### License
 
