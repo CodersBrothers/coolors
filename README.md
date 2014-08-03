@@ -2,10 +2,14 @@
 
 KISS, customizable and extensible module for do colorful console.log only for NodeJS. Simple, easy.
 
+- Auto-detects color support
+- Clean and focused
+- Extensible and configurable
+
 ## Install
 
 ```sh
-$ npm install --save coolors
+$ npm i --save coolors
 ```
 
 ## Usage
@@ -40,7 +44,8 @@ Styles will display correctly if font used in your console supports them.
 * italic *(not widely supported)*
 * underline
 * inverse
-* strikethrough
+* hidden
+* strikethrough *(not widely supported)*
 
 We can use like:
 
