@@ -86,32 +86,32 @@ You can extend and create own version creating a file with content like this
 ```js
 // coolorsExtended.js
 var coolors = require('coolors');
-function rainbown(msg){
+function rainbowLog(msg){
     var colorsText = coolors.availableStyles().text;
-    var rainbownColors = colorsText.splice(3);
-    var lengthColorsText = rainbownColors.length;
+    var rainbowColors = colorsText.splice(3);
+    var lengthRainbowColors = rainbowColors.length;
     var msgInLetters = msg.split('');
-    var rainbownEndText = '';
+    var rainbowEndText = '';
     var i = 0;
     msgInLetters.forEach(function(letter){
         if(letter != ' '){
-            if(i === lengthColorsText) i = 0;
-            rainbownEndText += coolors(letter, rainbownColors[i]);
+            if(i === lengthRainbowColors) i = 0;
+            rainbowEndText += coolors(letter, rainbowColors[i]);
             i++;
         }else{
-            rainbownEndText += ' ';
+            rainbowEndText += ' ';
         }
     });
-    return rainbownEndText;
+    return rainbowEndText;
 }
-coolors.addPlugin('rainbown', rainbown);
+coolors.addPlugin('rainbow', rainbowLog);
 module.exports = coolors;
 ```
 
 ```js
 // app.js
 var coolorsExtended = require('./coolorsExtended');
-console.log(coolorsExtended('This its a creative example extending core with a cool rainbown style', 'rainbown'));
+console.log(coolorsExtended('This its a creative example extending core with a cool rainbow style', 'rainbow'));
 console.log(coolorsExtended('My cool console log', 'red'));
 ```
 
