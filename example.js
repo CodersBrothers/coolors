@@ -43,23 +43,23 @@ function ligthRed(msg){
 coolors.addPlugin('ligthRed', ligthRed);
 console.log(coolors('New color', 'ligthRed'));
 
-function rainbown(msg){
+function rainbowLog(msg){
     var colorsText = coolors.availableStyles().text;
-    var rainbownColors = colorsText.splice(3);
-    var lengthColorsText = rainbownColors.length;
+    var rainbowColors = colorsText.splice(3);
+    var lengthRainbowColors = rainbowColors.length;
     var msgInLetters = msg.split('');
-    var rainbownEndText = '';
+    var rainbowEndText = '';
     var i = 0;
     msgInLetters.forEach(function(letter){
         if(letter != ' '){
-            if(i === lengthColorsText) i = 0;
-            rainbownEndText += coolors(letter, rainbownColors[i]);
+            if(i === lengthRainbowColors) i = 0;
+            rainbowEndText += coolors(letter, rainbowColors[i]);
             i++;
         }else{
-            rainbownEndText += ' ';
+            rainbowEndText += ' ';
         }
     });
-    return rainbownEndText;
+    return rainbowEndText;
 }
-coolors.addPlugin('rainbown', rainbown);
-console.log(coolors('This its a creative example extending core with a cool rainbown style', 'rainbown'));
+coolors.addPlugin('rainbow', rainbowLog);
+console.log(coolors('This its a creative example extending core with a cool rainbow style', 'rainbow'));
